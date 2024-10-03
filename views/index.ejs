@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>TO DO TASKS</h1>
+
+    <ul>
+      <% for(let i=0;i< tasks.length;i++){%>
+      <li class="item">
+        <% if(tasks[i].completed === true){%>
+        <span class="strike"><%=tasks[i].task%></span>
+        <% }else{%>
+        <span><%=tasks[i].task%></span>
+        <% } %>
+
+        <button>Delete</button>
+      </li>
+      <%}%>
+    </ul>
+
+    <form action="/tasks" method="post">
+      <input type="text" name="task" placeholder="Add a task" />
+      <button type="submit">Submit</button>
+    </form>
+    <script src="main.js"></script>
+  </body>
+</html>
