@@ -19,15 +19,29 @@ app.use(express.static("public"))
 
 
 
-app.get("/",(request,response)=>{
-    const listOfTasks=taskList.find().toArray()
+app.get("/",async (request,response)=>{
+    const listOfTasks= taskList.find().toArray()
+
+
     .then((results)=>{
-        response.render("index.ejs",{tasks:results})
+      const leftitem= taskList.countDocuments({completed:false})
+
+    .then((result2)=>{
+      response.render("index.ejs",{tasks:results,left:result2})
+    })
+    .catch((error)=>{
+        console.log(error)
+    })
+     
     })
     .catch((error)=>{
        console.error(error)
     })
     
+    
+
+
+ 
   })
 
 
