@@ -1,26 +1,23 @@
-My Awesome Project
+Hipp To Do List
 
-Write a short sentence or two about this project and what it does. Be sure to include a link and a screenshot (we're front end devs so we can actually see our work!).
+This application lets you create your to do list tracker which you can manipulate by checking the tasks that are completed and the tasks not completed.
 
 Link to project: http://recruiters-love-seeing-live-demos.com/
 
-alt tag
-
 How It's Made:
 
-Tech used: HTML, CSS, JavaScript, Framework of choice
+Express was used to create a server that responds to the request made by the client. Initially, Through the use of index.ejs file under Views folder on the request of homepage lists out all the tasks and the associated delete button. it also displays the remaining number of tasks that needed to be done. also, displaying a strike through to the tasks that were completed. Through the use of main.js file under public folder, upon clicking the delete button on the tasks, sends the delete request to the server which then listens for that request and deletes the task from the database using database properties associated with collections.
 
-Here's where you can go to town on how you actually built this thing. Write as much as you can here, it's totally fine if it's not too much just make sure you write something. If you don't have too much experience on your resume working on the front end that's totally fine. This is where you can really show off your passion and make up for that ten fold.
+Tech used: HTML, CSS, JavaScript, Nodejs, Express, mongoDB
 
 Optimizations
 
 (optional)
-
-You don't have to include this section but interviewers love that you can not only deliver a final product that looks great but also functions efficiently. Did you write something then refactor it later and the result was 5x faster than the original implementation? Did you cache your assets? Things that you write in this section are GREAT to bring up in interviews and you can use this section as reference when studying for technical interviews!
+I could definitely add a way to prioritise some tasks over the other. I can also create a category for the different kind of tasks and create a different list for the completed and incomplete tasks.
 
 Lessons Learned:
-
-No matter what your experience level, being an engineer means continuously learning. Every time you build something you always have those whoa this is awesome or wow I actually did it! moments. This is where you should share those moments! Recruiters and interviewers love to see that you're self-aware and passionate about growing.
+It was a great learning experience getting our server to respond to the requests made by the client. It was very confusing in the beginning while learning to work on the front end and sending the data to the server.
+It was a great aha moment when I realized when choosing Express to build server, it handles all the parsing of the JSON objects sent by the front end automatically.
 
 Examples:
 
